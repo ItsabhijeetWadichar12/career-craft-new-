@@ -61,7 +61,7 @@ function Education() {
         }
       }
   
-      GlobalApi.UpdateResumeData(params.resumeId,data).then(resp=>{
+      GlobalApi.UpdateResumeData(params?.resumeId,data).then(resp=>{
         console.log(resp);
         setLoading(false)
         toast('Details updated !')
@@ -132,15 +132,15 @@ function Education() {
       </div>
       <div className='flex justify-between'>
               <div className='flex gap-2'>
-              <Button variant="outline" onClick={AddNewEducation} className="text-primary"> + Add More Education</Button>
-              <Button variant="outline" onClick={RemoveEducation} className="text-primary"> - Remove</Button>
+                <Button variant="outline" onClick={AddNewEducation} className="text-primary"> + Add More Education</Button>
+                <Button variant="outline" onClick={RemoveEducation} className="text-primary"> - Remove</Button>
   
               </div>
               <Button disabled={loading} onClick={()=>onSave()}>
               {loading?<LoaderCircle className='animate-spin' />:'Save'}    
               </Button>
-          </div>
-      </div>
+        </div>
+    </div>
     )
   }
 

@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import GlobalApi from "./../../../../service/GlobalApi";
-import Header from "@/components/Custom/Header";
+import GlobalApi from "../../../../service/GlobalApi";
+
 import { Button } from "@/components/ui/button";
 import ResumePreview from "@/Dashboard/resume/components/ResumePreview";
 import { RWebShare } from "react-web-share";

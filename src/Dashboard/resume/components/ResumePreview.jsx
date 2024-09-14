@@ -5,6 +5,7 @@ import SummeryPreview from "./preview/SummeryPreview";
 import ProfessionExperience from "./preview/ProfessionExperience";
 import EducationalPreview from "./preview/EducationalPreview";
 import SkillsPreview from "./preview/SkillsPreview";
+import AchivmentPreview from "./preview/AchivmentPreview";
 
 function ResumePreview() {
 
@@ -35,6 +36,8 @@ function ResumePreview() {
         <SkillsPreview resumeInfo={resumeInfo}/>
 
         {/* Achivments // Documents  */}
+
+        <AchivmentPreview resumeInfo={resumeInfo}/>
 
     </div>
   )

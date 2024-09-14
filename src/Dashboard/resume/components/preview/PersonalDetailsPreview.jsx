@@ -5,9 +5,10 @@ function PersonalDetailsPreview({resumeInfo}) {
     <div>
        
             <img width={100} height={100}
+            
             style={{}}
             className='ml-auto mr-auto block border rounded-[50%] w-[20%]'
-            src={resumeInfo?.img} alt="no img" />
+            src={resumeInfo?.image} alt="no img" />
         
         <h2 className='font-bold text-xl text-center mt-2'
         style={{

@@ -18,14 +18,18 @@ const GetUserResume = (userEmail)=>axiosClient.get('/user-resumes?filters[userEm
 
 const UpdateResumeData = (id, data)=>axiosClient.put('/user-resumes/'+id,data)
 
+const UploadImage = ( img)=>axiosClient.post('/user-resumes/' , img)
+
 const GetResumeById = (id)=>axiosClient.get('user-resumes/' + id + "?populate=*")
 
 const DeleteResumeById = (id)=>axiosClient.delete('user-resumes/'+id)
+
+
 export default {
     CreateNewResume,
     GetUserResume,
     UpdateResumeData,
+    UploadImage,
     GetResumeById,
     DeleteResumeById
-
 }
