@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import FormSection from '../../components/FormSection';
-import ResumePreview from '../../components/ResumePreview';
+
+
 import { ResumeInfoContext } from '@/context/ResumeinfoContext';
 // import dummy from '@/data/dummy';
-import GlobalApi from './../../../../../service/GlobalApi';
+
+
+import GlobalApi from '../../../../../../service/GlobalApi';
+import FormSection from '@/Dashboard/resume/components/FormSection';
+import ResumePreview3 from '@/Dashboard/Templates2/components/ResumePreview3';
 
 
 
-function EditResume() {
+function  EditResume3() {
     const {resumeId}=useParams();
     const [resumeInfo,setResumeInfo]=useState();
     useEffect(()=>{
@@ -32,10 +36,10 @@ function EditResume() {
           <FormSection/>
         {/* Preview Section  */}
         
-         <ResumePreview/>
+         <ResumePreview3/>
     </div>
     </ResumeInfoContext.Provider>
   )
 }
 
-export default EditResume
+export default EditResume3

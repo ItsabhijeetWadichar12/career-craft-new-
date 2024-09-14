@@ -15,11 +15,14 @@ function Header() {
       {isSignedIn ? (
         <div className="flex gap-2 items-center">
 
-            <Link to={'/template'}>
-            <Button variant="outline">Templates</Button>
-            </Link>
+        
             <Link to={'/dashboard'}>
             <Button variant="outline">DashBoard</Button>
+            </Link>
+
+
+            <Link to={'/templates'}>
+            <Button variant="outline">Templates</Button>
             </Link>
           
           <UserButton />

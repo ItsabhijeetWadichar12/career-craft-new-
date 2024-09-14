@@ -4,6 +4,7 @@ import './App.css'
 import { useUser } from '@clerk/clerk-react'
 import Header from './components/Custom/Header';
 import { Toaster } from 'sonner';
+import Home from './Home';
 
 
 function App() {

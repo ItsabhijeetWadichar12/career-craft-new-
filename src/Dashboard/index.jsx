@@ -38,10 +38,10 @@ function Dashboard() {
           <AddResume/>
 
           
-          {resumeList.map((resume,index)=>(
-            
+          {resumeList.map((resume,index)=>(  
             // eslint-disable-next-line react/jsx-key
             <ResumeItems  resume={resume} key={index} refreshData={GetResumesList} />
+            
           ))
 
           }

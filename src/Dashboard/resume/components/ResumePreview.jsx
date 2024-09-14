@@ -7,6 +7,9 @@ import EducationalPreview from "./preview/EducationalPreview";
 import SkillsPreview from "./preview/SkillsPreview";
 import AchivmentPreview from "./preview/AchivmentPreview";
 
+
+
+
 function ResumePreview() {
 
     const {resumeInfo , setResumeInfo} =  useContext(ResumeInfoContext);
@@ -38,6 +41,7 @@ function ResumePreview() {
         {/* Achivments // Documents  */}
 
         <AchivmentPreview resumeInfo={resumeInfo}/>
+       
 
     </div>
   )

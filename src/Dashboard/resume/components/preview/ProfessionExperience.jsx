@@ -22,8 +22,7 @@ function ProfessionExperience({resumeInfo}) {
                     }}
                     >{experience?.title}</h2>
                     <h2 className='text-xs flex justify-between'>{experience?.companyName} {experience?.city} {experience?.state}
-                        <span> {experience?.startDate} To {experience?.currentlyWorking?experience?.endDate:
-                       'present'}</span>
+                        <span> {experience?.startDate} To {experience?.endDate}</span>
                     </h2>
                     {/* <p className='text-xs my-2 '>
 

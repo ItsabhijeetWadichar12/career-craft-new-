@@ -1,12 +1,16 @@
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import GlobalApi from "../../../../service/GlobalApi";
 
 import { Button } from "@/components/ui/button";
 import ResumePreview from "@/Dashboard/resume/components/ResumePreview";
 import { RWebShare } from "react-web-share";
 import { ResumeInfoContext } from "@/context/ResumeinfoContext";
+import ResumePreview1 from "@/Dashboard/Templates/components/ResumePreview1";
+import ResumePreview2 from "@/Dashboard/Templates1/components/ResumePreview2";
+import ResumePreview3 from "@/Dashboard/Templates2/components/ResumePreview3";
+import ResumePreview4 from "@/Dashboard/Templates3/components/ResumePreview4";
 
 
 function ViewResume() {
@@ -40,7 +44,12 @@ function ViewResume() {
                 <p className='text-center text-gray-400'>Now you are ready to download your resume and you can share unique 
                     resume url with your friends and family </p>
             <div className='flex justify-between px-44 my-10'>
+                <Link to={'/'} >
+                <Button>Home</Button>
+                </Link>
+                
                 <Button onClick={HandleDownload}>Download</Button>
+
                
                 <RWebShare
         data={{
@@ -55,12 +64,39 @@ function ViewResume() {
         </div>
             
         </div>
-        <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
 
-        <div id="print-area" >
+        <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
+        <div id="print-area" >   
            <ResumePreview/>
         </div>
         </div>
+
+        <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
+        <div id="print-area" >   
+        <ResumePreview1/>
+
+        </div>
+        </div>
+
+
+        <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
+        <div id="print-area" >   
+        <ResumePreview2/>
+
+        </div>
+        </div>
+        <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
+        <div id="print-area" >   
+        <ResumePreview3/>
+
+        </div>
+        </div><div className='my-10 mx-10 md:mx-20 lg:mx-36'>
+        <div id="print-area" >   
+        <ResumePreview4/>
+
+        </div>
+        </div>
+          
     </ResumeInfoContext.Provider>
 
     
