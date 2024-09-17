@@ -60,7 +60,8 @@ function FormSection() {
           :
           activeFormIndex==7?
           
-          <Navigate to={'/my-resume/'+resumeId+'/view'}/>
+          <Navigate to={'/my-resumes/'+resumeId+'/view'}/>
+          
               
         :null
           }

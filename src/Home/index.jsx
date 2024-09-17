@@ -30,7 +30,7 @@ function Home() {
 
             </Link>
             <Link to={'https://nexmeet-lake.vercel.app/'}>
-            <Button className="ml-5" variant="outline">Check Out >> Next Meet</Button>
+            <Button className="ml-5" variant="outline">Check Out  Next Meet</Button>
 
             </Link>
         </div>

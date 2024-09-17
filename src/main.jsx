@@ -72,7 +72,7 @@ const router = createBrowserRouter([
     element:<SignInPage/>
   },
   {
-    path:'/my-resume/:resumeId/view',
+    path:'/my-resumes/:resumeId/view',
     element:<ViewResume/>
   }
 ])

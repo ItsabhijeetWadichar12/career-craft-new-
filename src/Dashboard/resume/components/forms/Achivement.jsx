@@ -36,7 +36,7 @@ function Achivement() {
         setSelectFile(URL.createObjectURL(file));
       
         // Define the file name and storage reference
-        const fileName = `${Date.now()}.jdf`;
+        const fileName = `${Date.now()}.pdf`;
         const storageRef = ref(storage, `achivments/${fileName}`);
       
         try {

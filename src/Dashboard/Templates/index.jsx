@@ -8,35 +8,35 @@ function Templates() {
     {
         id: 1,
         name: "Professional Resume",
-        image: "/public/template1.png",
+        image: "/template1.png",
         price: "$FREE",
         description: "A clean and modern resume template for professionals."
     },
     {
         id: 2,
         name: "Creative Resume",
-        image: "/public/template2.png",
+        image: "/template2.png",
         price: "$FREE",
         description: "A vibrant, colorful template for creative roles."
     },
     {
         id: 3,
         name: "Simple Resume",
-        image: "/public/template3.png",
+        image: "/template3.png",
         price: "$FREE",
         description: "A minimalist resume template with simple design elements."
     },
     {
         id: 4,
         name: "Elegant Resume",
-        image: "/public/template4.png",
+        image: "/template4.png",
         price: "$FREE",
         description: "An elegant, formal resume template with a sleek layout."
     },
     {
       id: 4,
       name: "Elegant Resume",
-      image: "/public/template5.png",
+      image: "/template5.png",
       price: "$FREE",
       description: "An elegant, formal resume template with a sleek layout."
   }

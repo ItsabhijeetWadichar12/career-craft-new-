@@ -147,7 +147,7 @@ function ResumeItems({resume , refreshData}) {
           <div className='flex 
         items-center justify-center h-[180px] '>
                 {/* <Notebook/> */}
-                <img src="/template2.png" width={80} height={80} />
+                <img src="/template4.png" width={80} height={80} />
               </div>
         </div>
       </Link>
@@ -170,7 +170,7 @@ function ResumeItems({resume , refreshData}) {
           <div className='flex 
         items-center justify-center h-[180px] '>
                 {/* <Notebook/> */}
-                <img src="/template2.png" width={150} height={150} />
+                <img src="/template5.png" width={150} height={150} />
               </div>
         </div>
       </Link>
@@ -197,8 +197,8 @@ function ResumeItems({resume , refreshData}) {
           <DropdownMenuContent>
            
             <DropdownMenuItem  onClick={()=>navigation('/dashboard/resume/'+resume?.documentId+"/edit")}>Edit</DropdownMenuItem>
-            <DropdownMenuItem onClick={()=>navigation('/my-resume/'+resume?.documentId+"/view")}>View</DropdownMenuItem>
-            <DropdownMenuItem onClick={()=>navigation('/my-resume/'+resume?.documentId+"/view")}>Download</DropdownMenuItem>
+            <DropdownMenuItem onClick={()=>navigation('/my-resumes/'+resume?.documentId+"/view")}>View</DropdownMenuItem>
+            <DropdownMenuItem onClick={()=>navigation('/my-resumes/'+resume?.documentId+"/view")}>Download</DropdownMenuItem>
             <DropdownMenuItem onClick={()=>setOpenAlert(true)}>Delete</DropdownMenuItem>
             
           </DropdownMenuContent>

@@ -6,9 +6,9 @@ function Header() {
   const { user, isSignedIn } = useUser();
 
   return (
-    <div className="p-3 px-5 flex justify-between shadow-md">
+    <div className="p-3 px-5 flex justify-between shadow-md ">
       <Link to="/" className="cursor-pointer">
-      <img src="/logo.svg" alt="loading img" width={100} height={100} />
+      <img src="/career-craft-high-resolution-logo-black-transparent.png" alt="loading img" width={150} height={0} />
           
         </Link>
 
