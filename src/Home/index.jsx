@@ -1,102 +1,102 @@
+import Footer from "@/components/Custom/Footer";
 import Header from "@/components/Custom/Header"
 import { Button } from "@/components/ui/button";
+import Contact from "@/Dashboard/Contact";
+import Paging from "@/Dashboard/Paging";
+import Reviews from "@/Dashboard/Reviews";
+
 import { useUser } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link} from "react-router-dom";
 
 
 
 function Home() {
+  
+ 
 
   const { user, isSignedIn } = useUser();
 
+
   return (
-    <div className="min-h-screen">
-            {/* Navbar */}
-            <Header/>
+    <div className="h-full">
+      <Header/>
 
-            {/* Hero Section */}
-            <header className="bg-slate-400 shadow-md py-12">
-                <div className="container mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-blue-600">Build Your Professional Resume in Minutes!</h2>
-                    <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-                        Our easy-to-use online resume builder helps you create a professional and impressive resume
-                        in just a few clicks. Choose from a variety of templates, customize the content, and get ready to land your dream job!
-                    </p>
 
-                    {isSignedIn ? (
-        <div className="flex gap-2 items-center ml-[40%] ">
-          <Link to={'/dashboard'}>
-            <Button>DashBoard</Button>
+           
+ 
+<section className="bg-gray-900 text-white ">
+  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <div className="mx-auto max-w-3xl text-center">
+      <h1
+        className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl  animate-bounce   font-extrabold text-transparent sm:text-5xl"
+      >
+          Crafting the Future with Precision
 
+        
+      </h1>
+
+      <p className="mx-auto mt-4 max-w-xl text-md animate-out">
+      Career Craft helps you create a professional resume with precision, highlighting your skills and experience to unlock future opportunities.
+      </p>
+
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
+
+      {isSignedIn ? (
+        
+          <Link to={'/'}>
+            <Button  className=" w-full rounded border border-blue-600 bg-blue-600 px-12 py-4 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" >Home</Button>
             </Link>
-            <Link to={'https://nexmeet-lake.vercel.app/'}>
-            <Button className="ml-5" variant="outline">Check Out  Next Meet</Button>
-
-            </Link>
-        </div>
+        
       ) : (
         <Link to="/auth/sign-in">
-          <Button>Get Started</Button>
+            <Button  className=" w-full rounded border border-blue-600 bg-blue-600 px-12 py-4 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" >Get Started..</Button>
         </Link>
       )}
-                </div>
-            </header>
+
+<Button  className=" w-full rounded border border-blue-600 bg-blue-600 px-12 py-4 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" >Learn More</Button>
+      
+    
+
+      </div>
+    </div>
+  </div>
+  
+</section> 
+
+
 
             {/* Features Section */}
             <section className="py-12 bg-gray-50">
                 <div className="container mx-auto text-center">
-                    <h3 className="text-3xl font-bold text-blue-600 mb-8">Why Choose Our Resume Builder?</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Feature 1 */}
-                        <div className="p-6 bg-white shadow-md rounded-lg">
-                            <h4 className="text-2xl font-semibold text-gray-800">Professional Templates</h4>
-                            <p className="mt-4 text-gray-600">
-                                Choose from a wide selection of templates that suit your style and professional needs.
-                            </p>
-                        </div>
-
-                        {/* Feature 2 */}
-                        <div className="p-6 bg-white shadow-md rounded-lg">
-                            <h4 className="text-2xl font-semibold text-gray-800">Easy Customization</h4>
-                            <p className="mt-4 text-gray-600">
-                                Customize fonts, colors, and layout effortlessly to match your personal brand.
-                            </p>
-                        </div>
-
-                        {/* Feature 3 */}
-                        <div className="p-6 bg-white shadow-md rounded-lg">
-                            <h4 className="text-2xl font-semibold text-gray-800">Download & Share</h4>
-                            <p className="mt-4 text-gray-600">
-                                Download your resume in PDF format or share it directly online.
-                            </p>
-                        </div>
-                    </div>
+                       <Paging/>
                 </div>
             </section>
 
-            {/* Call to Action */}
-            <section className="py-12 bg-white">
+
+            <section className="py-12 bg-gray-50">
                 <div className="container mx-auto text-center">
-                    <h3 className="text-3xl font-bold text-gray-800">Ready to Build Your Resume?</h3>
-                    <p className="text-gray-600 mt-4">Get started with our user-friendly resume builder and impress your potential employers.</p>
-                    {isSignedIn ? (
-        <div className="flex gap-2 items-center ml-[50%]">
-          <Link to={'/'}>
-            <Button >Home</Button>
-            </Link>
-        </div>
-      ) : (
-        <Link to="/auth/sign-in">
-          <Button>Get Started Now</Button>
-        </Link>
-      )}
+                    
+                       <Reviews/>
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="bg-blue-600 py-6 text-white text-center">
-                <p>© 2024 Carrer Craft . All rights reserved.</p>
-            </footer>
+            <section>
+              <div className="container mx-auto text-center">
+                <div className="flex items-center justify-center">
+                  <h2 className="font-bold text-[48px] underline">Contact Us </h2>
+                </div>
+                <Contact/>
+              </div>
+            </section>
+
+            
+            <section>
+              <div className="container mx-auto text-center">
+                <Footer/>
+              </div>
+            </section>
+
         </div>
   )
 }

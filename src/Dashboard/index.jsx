@@ -3,6 +3,7 @@ import AddResume from "./component/AddResume"
 import GlobalApi from "../../service/GlobalApi";
 import { useEffect, useState } from "react";
 import ResumeItems from "./component/ResumeItems";
+import Templates from "./Templates";
 
 
 
@@ -36,11 +37,16 @@ function Dashboard() {
 
         <div className="grid grid-cols-2  md:grid-cols-3  lg:grid-cols-5">
           <AddResume/>
+          
 
           
           {resumeList.map((resume,index)=>(  
             // eslint-disable-next-line react/jsx-key
+            <>
             <ResumeItems  resume={resume} key={index} refreshData={GetResumesList} />
+            {/* <Templates resume={resume} key={index} refreshData={GetResumesList}/> */}
+            </>
+            
             
           ))
 

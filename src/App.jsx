@@ -5,6 +5,7 @@ import { useUser } from '@clerk/clerk-react'
 import Header from './components/Custom/Header';
 import { Toaster } from 'sonner';
 import Home from './Home';
+import Footer from './components/Custom/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
     <Header/>
+    
     <Outlet/>
     <Toaster/>
     </>

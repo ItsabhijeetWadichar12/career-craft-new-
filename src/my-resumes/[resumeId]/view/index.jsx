@@ -11,6 +11,7 @@ import ResumePreview1 from "@/Dashboard/Templates/components/ResumePreview1";
 import ResumePreview2 from "@/Dashboard/Templates1/components/ResumePreview2";
 import ResumePreview3 from "@/Dashboard/Templates2/components/ResumePreview3";
 import ResumePreview4 from "@/Dashboard/Templates3/components/ResumePreview4";
+import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 
 
 function ViewResume() {
@@ -36,6 +37,7 @@ function ViewResume() {
   return (
     <ResumeInfoContext.Provider value={{resumeInfo,setResumeInfo}} >
         <div id="no-print">
+            
         
 
         <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
@@ -44,6 +46,7 @@ function ViewResume() {
                 <p className='text-center text-gray-400'>Now you are ready to download your resume and you can share unique 
                     resume url with your friends and family </p>
             <div className='flex justify-between px-44 my-10'>
+            <Button ><ArrowBigLeft/></Button>
                 <Link to={'/'} >
                 <Button>Home</Button>
                 </Link>
@@ -60,6 +63,9 @@ function ViewResume() {
         onClick={() => console.log("shared successfully!")}
       > <Button>Share</Button>
       </RWebShare>
+
+      <Button ><ArrowBigRight/></Button>
+      
             </div>
         </div>
             

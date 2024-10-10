@@ -14,6 +14,10 @@ import EditResume1 from './Dashboard/Templates/resume/[resumeId]/edit/index.jsx'
 import EditResume2 from './Dashboard/Templates1/resume/[resumeId]/edit/index.jsx'
 import EditResume3 from './Dashboard/Templates2/resume/[resumeId]/edit/index.jsx'
 import EditResume4 from './Dashboard/Templates3/resume/[resumeId]/edit/index.jsx'
+import Contact from './Dashboard/Contact/index.jsx'
+import AboutUs from './Dashboard/About/index.jsx'
+import Services from './Dashboard/Services/index.jsx'
+import FAQS from './components/Custom/FAQS.jsx'
 
 
 
@@ -36,6 +40,22 @@ const router = createBrowserRouter([
       {
         path:'/templates',
         element:<Templates/>
+      },
+      {
+        path:'/contact',
+        element:<Contact/>
+      },
+      {
+        path:'/about-us',
+        element:<AboutUs/>
+      },
+      {
+        path:'/services',
+        element:<Services/>
+      },
+      {
+        path:'/faqs',
+        element:<FAQS/>
       },
 
       

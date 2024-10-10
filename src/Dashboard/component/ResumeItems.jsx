@@ -56,134 +56,28 @@ function ResumeItems({resume , refreshData}) {
     })
   }
   return (
-    <div >
-
-      <div className="text-center">
-  
-      
-      <h3 className="text-emerald-400 ml-10 ">Template1</h3>
-      <Link to={'/dashboard/resume/' + resume?.documentId+"/edit"}>
-          <div className='p-14 bg-secondary flex items-center justify-center mt-10 m-2 h-[280px] 
-            cursor-pointer mb-0 hover:scale-105
-        translate-all hover:shadow-lg
-           bg-gradient-to-b
-            from-pink-100 via-purple-400 to-blue-500
-          h-[280px] 
-            rounded border border-dashed border-b-0 border-2 mt-0'
-            style={{
-              borderColor:resume?.themeColor
-            }}
-            
-            >
-         
-          <div className='flex 
-        items-center justify-center h-[180px] '>
-                {/* <Notebook/> */}
-                <img src="/template1.png" width={80} height={80} />
-              </div>
-        </div>
-      </Link>
-
-      <h3 className="text-emerald-400">Template2</h3>
-
-      <Link to={'/dashboard/Templates/resume/' + resume?.documentId+"/edit"}>
-          <div className='p-14 bg-secondary flex items-center justify-center mt-10 m-2 h-[280px] 
-            cursor-pointer mb-0 hover:scale-105
-        translate-all hover:shadow-lg
-           bg-gradient-to-b
-            from-pink-100 via-purple-400 to-blue-500
-          h-[280px] 
-            rounded border border-dashed border-b-0 border-2'
-            style={{
-              borderColor:resume?.themeColor
-            }} 
-            >
-         
-          <div className='flex 
-        items-center justify-center h-[180px] '>
-                {/* <Notebook/> */}
-                <img src="/template2.png" width={80} height={80} />
-              </div>
-        </div>
-      </Link>
-      <h3 className="text-emerald-400">Template3</h3>
-
-      <Link to={'/dashboard/Templates1/resume/' + resume?.documentId+"/edit"}>
-          <div className='p-14 bg-secondary flex items-center justify-center mt-10 m-2 h-[280px] 
-            cursor-pointer mb-0 hover:scale-105
-        translate-all hover:shadow-lg
-           bg-gradient-to-b
-            from-pink-100 via-purple-400 to-blue-500
-          h-[280px] 
-            rounded border border-dashed border-b-0 border-2'
-            style={{
-              borderColor:resume?.themeColor
-            }} 
-            >
-         
-          <div className='flex 
-        items-center justify-center h-[180px] '>
-                {/* <Notebook/> */}
-                <img src="/template3.png" width={80} height={80} />
-              </div>
-        </div>
-      </Link>
-      <h3 className="text-emerald-400">Template4</h3>
-
-
-      <Link to={'/dashboard/Templates2/resume/' + resume?.documentId+"/edit"}>
-          <div className='p-14 bg-secondary flex items-center justify-center mt-10 m-2 h-[280px] 
-            cursor-pointer mb-0 hover:scale-105
-        translate-all hover:shadow-lg
-           bg-gradient-to-b
-            from-pink-100 via-purple-400 to-blue-500
-          h-[280px] 
-            rounded border border-dashed border-b-0 border-2'
-            style={{
-              borderColor:resume?.themeColor
-            }} 
-            >
-         
-          <div className='flex 
-        items-center justify-center h-[180px] '>
-                {/* <Notebook/> */}
-                <img src="/template4.png" width={80} height={80} />
-              </div>
-        </div>
-      </Link>
-
-      <h3 className="text-emerald-400">Template5</h3>
-
-      <Link to={'/dashboard/Templates3/resume/' + resume?.documentId+"/edit"}>
-          <div className='p-14 bg-secondary flex items-center justify-center mt-10 m-2 h-[280px] 
-            cursor-pointer mb-0 hover:scale-105
-        translate-all hover:shadow-lg
-           bg-gradient-to-b
-            from-pink-100 via-purple-400 to-blue-500
-          h-[280px] 
-            rounded border border-dashed border-b-0 border-2'
-            style={{
-              borderColor:resume?.themeColor
-            }} 
-            >
-         
-          <div className='flex 
-        items-center justify-center h-[180px] '>
-                {/* <Notebook/> */}
-                <img src="/template5.png" width={150} height={150} />
-              </div>
-        </div>
-      </Link>
-
-      </div>
-
     
 
-      
+      <div className="text-center ">
 
+      <Link to={'/dashboard/resume/' + resume?.documentId+"/edit"}>
+      <div className='mt-10 ml-5 border rounded-lg h-[280px] w-[200px] hover:scale-105
+        translate-all hover:shadow-lg cursor-pointer flex items-center pl-14
+        bg-gradient-to-r from-fuchsia-600 to-pink-600'
+            style={{
+              borderColor:resume?.themeColor
+            }} 
+            >
+         
+      
+                {/* <Notebook/> */}
+                <img src="/public/resumeicon.png" width={100} height={150}/>
+              
+        </div>
+      </Link>
 
       
-      <div className=' p-3 flex justify-between mt-0 text-red-50 border rounded-xl '
+      <div className=' p-3 flex justify-between mt-0 ml-5 text-red-50 border rounded-lg md:w-[200px] sm:w-[100px]'
          style={{
           background:resume?.themeColor
         }}
