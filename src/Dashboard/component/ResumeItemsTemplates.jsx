@@ -32,7 +32,7 @@ import { Link } from "react-router-dom";
         image: "/template3.png",
         price: "$FREE",
         description: "A minimalist resume template with simple design elements.",
-        url: `/dashboard/Templates1//resume/${resume?.documentId}/edit` // Fixed URL concatenation
+        url: `/dashboard/Templates1/resume/${resume?.documentId}/edit` // Fixed URL concatenation
       },
       {
         id: 4,
