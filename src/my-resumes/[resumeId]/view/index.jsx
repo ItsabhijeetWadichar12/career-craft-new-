@@ -18,21 +18,28 @@ function ViewResume() {
 
     const [resumeInfo,setResumeInfo]=useState();
     const {resumeId}=useParams();
+    const [activeFormIndex , setActiveFormIndex] =  useState(1);
 
     useEffect(()=>{
         GetResumeInfo();
         console.log(resumeId)
+        console.log(activeFormIndex)
     },[])
     const GetResumeInfo=()=>{
         GlobalApi.GetResumeById(resumeId).then(resp=>{
             console.log(resp?.data?.data);
             setResumeInfo(resp?.data?.data);
         })
+
+        
     }
 
     const HandleDownload=()=>{
         window.print();
     }
+
+  
+
 
   return (
     <ResumeInfoContext.Provider value={{resumeInfo,setResumeInfo}} >
@@ -46,7 +53,7 @@ function ViewResume() {
                 <p className='text-center text-gray-400'>Now you are ready to download your resume and you can share unique 
                     resume url with your friends and family </p>
             <div className='flex justify-between px-44 my-10'>
-            <Button ><ArrowBigLeft/></Button>
+            <Button  onClick={()=>activeFormIndex>1 && setActiveFormIndex(activeFormIndex-1)}><ArrowBigLeft/></Button>
                 <Link to={'/'} >
                 <Button>Home</Button>
                 </Link>
@@ -64,7 +71,7 @@ function ViewResume() {
       > <Button>Share</Button>
       </RWebShare>
 
-      <Button ><ArrowBigRight/></Button>
+      <Button onClick={()=>setActiveFormIndex(activeFormIndex+1)}><ArrowBigRight/></Button>
       
             </div>
         </div>
@@ -72,12 +79,21 @@ function ViewResume() {
         </div>
 
         <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
-        <div id="print-area" >   
-           <ResumePreview/>
+        <div id="print-area" >  
+            {
+               
+                activeFormIndex == 1?<ResumePreview/>:
+                activeFormIndex == 2?<ResumePreview1/>:
+                activeFormIndex == 3?<ResumePreview2/>:
+                activeFormIndex == 4?<ResumePreview3/>:
+                activeFormIndex == 5?<ResumePreview4/>:
+                null
+            } 
+           
         </div>
         </div>
 
-        <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
+        {/* <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
         <div id="print-area" >   
         <ResumePreview1/>
 
@@ -101,7 +117,7 @@ function ViewResume() {
         <ResumePreview4/>
 
         </div>
-        </div>
+        </div> */}
           
     </ResumeInfoContext.Provider>
 
